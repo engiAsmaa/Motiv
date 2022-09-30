@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@layer base {
+  @font-face {
+    font-family: 'DM Sans', sans-serif;
+    src: url('../../public/fonts/DMSans-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Effra', sans-serif;
+    src: url('../../public/fonts/Effra.woff2') format('woff2');
+  }
+
+}
+html {
+  @apply bg-body-gray;
+}
