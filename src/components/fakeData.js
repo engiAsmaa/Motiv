@@ -58,3 +58,38 @@ export const earnCards = [
     img: pointsImg,
   },
 ];
+// earnd filter options  in cars page
+
+export const dateOptions = [
+  {
+    label: 'New',
+    value: 'new',
+  },
+  {
+    label: 'Old',
+    value: 'old',
+  },
+];
+
+export const typeOptions = [
+  {
+    label: 'Type',
+    value: '',
+  },
+  {
+    label: 'Toyota',
+    value: 'toyota',
+  },
+  {
+    label: 'Coupe',
+    value: 'coupe',
+  },
+  {
+    label: 'Sedan',
+    value: 'sedan',
+  },
+  {
+    label: 'Targa',
+    value: 'targa',
+  },
+];

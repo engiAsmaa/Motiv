@@ -1,7 +1,7 @@
 import React from 'react';
-import compImg from '../../images/dashboard/computer.png';
+import compImg from '../../../images/dashboard/computer.png';
 import EarnedCard from '../EarnedCard';
-import { earnCards } from '../fakeData';
+import { earnCards } from '../../fakeData';
 
 function EarnedRow() {
   return (

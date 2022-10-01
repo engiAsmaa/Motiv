@@ -2,42 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Filter from '../Filter';
-import { ReactComponent as Grid } from '../../images/cars/grid.svg';
-import { ReactComponent as FilterIcon } from '../../images/cars/filter.svg';
+import { ReactComponent as Grid } from '../../../images/cars/grid.svg';
+import { ReactComponent as FilterIcon } from '../../../images/cars/filter.svg';
+import { dateOptions, typeOptions } from '../../fakeData';
 
-const dateOptions = [
-  {
-    label: 'New',
-    value: 'new',
-  },
-  {
-    label: 'Old',
-    value: 'old',
-  },
-];
-
-const typeOptions = [
-  {
-    label: 'Type',
-    value: '',
-  },
-  {
-    label: 'Toyota',
-    value: 'toyota',
-  },
-  {
-    label: 'Coupe',
-    value: 'coupe',
-  },
-  {
-    label: 'Sedan',
-    value: 'sedan',
-  },
-  {
-    label: 'Targa',
-    value: 'targa',
-  },
-];
 function CarsHeader({ setSelectTypeVal, selectTypeVal }) {
   return (
     <div className="flex w-full justify-between items-center py-[34px]">

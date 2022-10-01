@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import CarsHeader from '../../components/CarsHeader';
-import CarCard from '../../components/CarCard';
+import { CarsHeader, CarCard } from '../../components/CarsPage';
 import BeatLoader from '../../components/Loader';
 
 function Cars() {
   const [carsReq, setCarsReq] = useState({ cars: [], loading: true });
   const [selectTypeVal, setSelectTypeVal] = useState('');
-  console.log(selectTypeVal);
   // fetch data and filter by car type
   useEffect(() => {
     fetch('https://6336d6a165d1e8ef26747ec9.mockapi.io/cars')

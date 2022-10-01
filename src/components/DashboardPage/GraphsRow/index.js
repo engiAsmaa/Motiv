@@ -1,6 +1,6 @@
 import React from 'react';
 import RadialChart from '../RadialChart';
-import { charts } from '../fakeData';
+import { charts } from '../../fakeData';
 
 function GraphsRow() {
   return (
