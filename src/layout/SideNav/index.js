@@ -1,34 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
-import { ReactComponent as DashboardIcon } from '../../images/layout/dashboard.svg';
-import { ReactComponent as CarsIcon } from '../../images/layout/car.svg';
-import { ReactComponent as SettingsIcon } from '../../images/layout/setting.svg';
-import { ReactComponent as LogOutIcon } from '../../images/layout/logOut.svg';
 
-const links1 = [
-  {
-    icon: <DashboardIcon className="mr-2" />,
-    title: 'Dashboard',
-    route: '/',
-  },
-  {
-    icon: <CarsIcon className="mr-2" />,
-    title: 'Cars',
-    route: '/cars',
-  },
-];
-const links2 = [
-  {
-    icon: <SettingsIcon className="mr-2" />,
-    title: 'Settings',
-    route: '/',
-  },
-  {
-    icon: <LogOutIcon className="mr-2" />,
-    title: 'Log out',
-    route: '/',
-  },
-];
+import { links1, links2 } from '../../components/fakeData';
+
 function SideNav() {
   const location = useLocation();
   return (

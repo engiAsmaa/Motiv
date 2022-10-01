@@ -1,13 +1,18 @@
+import PropTypes from 'prop-types';
 import { ReactComponent as Notification } from '../../images/layout/notification.svg';
 import { ReactComponent as Search } from '../../images/layout/search.svg';
 import userImg from '../../images/layout/user.png';
 import logoImg from '../../images/layout/logo.png';
 
-function Header() {
+function Header({ setSearchTxt }) {
   return (
     <div className="flex justify-between items-center sm:px-6 px-3 py-4 bg-white">
       <div className="md:w-[248px] w-32">
-        <img src={logoImg} alt="logo" className="sm:w-[109px] w-[88px] sm:h-8 h-6" />
+        <img
+          src={logoImg}
+          alt="logo"
+          className="sm:w-[109px] w-[88px] sm:h-8 h-6"
+        />
       </div>
       <div className="flex justify-between w-full">
         <div className="flex md:w-[358px] sm:w-[220px] w-[140px] sm:h-[46px] h-9 md:ml-[30px] ml-0 rounded-lg bg-light-gray py-3 sm:px-[14px] px-2">
@@ -16,6 +21,7 @@ function Header() {
             type="text"
             placeholder="Search by name"
             className="bg-light-gray sm:w-36 w-20 md:w-auto outline-none sm:placeholder:text-base placeholder:text-xs  placeholder:font-medium placeholder:text-dark-gray"
+            onChange={(e) => setSearchTxt(e.target.value)}
           />
         </div>
         <div className="flex justify-evenly items-center">
@@ -24,7 +30,10 @@ function Header() {
         </div>
       </div>
     </div>
+    // </SearchContext.Provider>
   );
 }
-
+Header.propTypes = {
+  setSearchTxt: PropTypes.func.isRequired,
+};
 export default Header;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import { ReactComponent as Like } from '../../../images/cars/like.svg';
 import { ReactComponent as Replace } from '../../../images/cars/replace.svg';
 import { ReactComponent as User } from '../../../images/cars/user.svg';
@@ -15,9 +16,21 @@ function CarCard({
         <h1 className="sm:text-lg text-base font-bold font-DMSans text-light-black">
           {name}
         </h1>
-        <Like
-          className={`${like ? 'fill-[#F84F56]' : 'stroke-[#A4A5A6]'} mr-3 `}
-        />
+        <motion.div
+          animate={{
+            scale: [1.3, 1, 1.3],
+            transition: {
+              repeat: Infinity,
+              duration: 2,
+              ease: 'linear',
+              times: [0, 0.5, 1],
+            },
+          }}
+        >
+          <Like
+            className={`${like ? 'fill-[#F84F56]' : 'stroke-[#A4A5A6]'} mr-3 `}
+          />
+        </motion.div>
       </div>
       <h1 className="self-start sm:text-base text-sm font-normal font-DMSans mt-[5px] text-[#72767C]">
         {type}

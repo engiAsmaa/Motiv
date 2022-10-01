@@ -4,6 +4,10 @@ import { ReactComponent as Range } from '../images/dashboard/range.svg';
 import { ReactComponent as Energy } from '../images/dashboard/energy.svg';
 import badgetImg from '../images/dashboard/badget.png';
 import pointsImg from '../images/dashboard/points.png';
+import { ReactComponent as DashboardIcon } from '../images/layout/dashboard.svg';
+import { ReactComponent as CarsIcon } from '../images/layout/car.svg';
+import { ReactComponent as SettingsIcon } from '../images/layout/setting.svg';
+import { ReactComponent as LogOutIcon } from '../images/layout/logOut.svg';
 // charts in dashboard
 export const charts = [
   {
@@ -58,7 +62,7 @@ export const earnCards = [
     img: pointsImg,
   },
 ];
-// earnd filter options  in cars page
+// filter options  in cars page
 
 export const dateOptions = [
   {
@@ -91,5 +95,30 @@ export const typeOptions = [
   {
     label: 'Targa',
     value: 'targa',
+  },
+];
+
+export const links1 = [
+  {
+    icon: <DashboardIcon className="mr-2" />,
+    title: 'Dashboard',
+    route: '/',
+  },
+  {
+    icon: <CarsIcon className="mr-2" />,
+    title: 'Cars',
+    route: '/cars',
+  },
+];
+export const links2 = [
+  {
+    icon: <SettingsIcon className="mr-2" />,
+    title: 'Settings',
+    route: '/',
+  },
+  {
+    icon: <LogOutIcon className="mr-2" />,
+    title: 'Log out',
+    route: '/',
   },
 ];
