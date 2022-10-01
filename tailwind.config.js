@@ -18,13 +18,16 @@ module.exports = {
       fontFamily: {
         DMSans: ["DM Sans"],
         Effra: ["Effra"],
-        // SegoeUIBold: ["SegoeUI-Bold"],
+        Poppins: ["Poppins"],
         // SegoeUISemibold: ["SegoeUI-Semibold"],
       },
       colors: {
+        "light-black": "#242731",
+        "dark-black":"#1F2128",
         "light-gray": "#F5F4F6",
         "semiLight-gray": "#F3F5F8",
         "dark-gray": "#7C7C8D",
+        "semiDark-gray": "#5F6165",
         "body-gray": "#F5F5F5",
         "dark-green": "#0F2837",
         "dark-orange": "#FF9619",

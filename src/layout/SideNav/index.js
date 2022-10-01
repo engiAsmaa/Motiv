@@ -39,7 +39,7 @@ function SideNav() {
             key={item.title}
           >
             {item.icon}
-            <p className="text-sm text-[#5F6165] font-medium">{item.title}</p>
+            <p className="text-sm text-semiDark-gray font-medium">{item.title}</p>
           </Link>
         ))}
       </div>
@@ -51,7 +51,7 @@ function SideNav() {
             key={item.title}
           >
             {item.icon}
-            <p className="text-sm text-[#5F6165] font-medium">{item.title}</p>
+            <p className="text-sm text-semiDark-gray font-medium">{item.title}</p>
           </Link>
         ))}
       </div>

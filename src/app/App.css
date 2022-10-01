@@ -3,15 +3,41 @@
 @import 'tailwindcss/utilities';
 @layer base {
   @font-face {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans';
     src: url('../../public/fonts/DMSans-Regular.woff2') format('woff2');
   }
   @font-face {
-    font-family: 'Effra', sans-serif;
+    font-family: 'Effra';
     src: url('../../public/fonts/Effra.woff2') format('woff2');
   }
-
+  @font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../../public/fonts/Poppins-Medium.ttf') format('ttf');
+  }
 }
 html {
   @apply bg-body-gray;
+  scroll-behavior: smooth;
+  overflow-y: overlay;
+}
+.select {
+  cursor: pointer;
+  color: #5f6165;
+  border: none;
+  outline: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  apperance: none;
+  background: #fff url(../images/cars/caret.png) 85% / 13% no-repeat;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-3xl bg-black  bg-opacity-20;
 }

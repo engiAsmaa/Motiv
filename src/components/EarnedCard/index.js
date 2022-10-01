@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function EarnedCard({
-  bgColor, type, description, img, number, numColor,
+  card: {
+    bgColor, type, descrption, img, number, numColor,
+  },
 }) {
   return (
     <div className={`${bgColor} flex flex-col py-[29px] px-6 rounded `}>
@@ -11,7 +13,9 @@ function EarnedCard({
           <h1 className="text-2xl font-bold font-Effra text-white">
             You have earned
           </h1>
-          <p className={`text-[40px] leading-9 font-Effra font-bold ${numColor}`}>
+          <p
+            className={`text-[40px] leading-9 font-Effra font-bold ${numColor}`}
+          >
             {number}
           </p>
           <h1 className="text-2xl font-bold font-Effra text-white">{type}</h1>
@@ -19,21 +23,16 @@ function EarnedCard({
         <img src={img} alt="vector" className="w-[110px] h-[110px]" />
       </div>
       <p className={`text-xs font-normal font-Effra ${numColor}`}>
-        {description}
+        {descrption}
       </p>
     </div>
   );
 }
 EarnedCard.propTypes = {
-  bgColor: PropTypes.string,
-  numColor: PropTypes.string,
-  number: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
+  card: PropTypes.object.isRequired,
 };
-EarnedCard.defaultProps = {
-  bgColor: 'bg-dark-green',
-  numColor: 'text-dark-orange',
-};
+// EarnedCard.defaultProps = {
+//   bgColor: "bg-dark-green",
+//   numColor: "text-dark-orange",
+// };
 export default EarnedCard;
