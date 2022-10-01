@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as Motiv } from '../../images/dashboard/motiv.svg';
-import { ReactComponent as Replace } from '../../images/dashboard/replace.svg';
-import { ReactComponent as Settings } from '../../images/dashboard/setting.svg';
-import { ReactComponent as Energy } from '../../images/dashboard/energyIcon.svg';
+import { ReactComponent as Motiv } from '../../../images/dashboard/motiv.svg';
+import { ReactComponent as Replace } from '../../../images/dashboard/replace.svg';
+import { ReactComponent as Settings } from '../../../images/dashboard/setting.svg';
+import { ReactComponent as Energy } from '../../../images/dashboard/energyIcon.svg';
 
 function RecommendCard({
   car: {
@@ -26,12 +26,16 @@ function RecommendCard({
           {`${percent}% Recommend`}
         </h1>
       </div>
-      <img src={image} alt="car" className="w-64 h-[106px] self-center my-[11px]" />
+      <img
+        src={image}
+        alt="car"
+        className="w-64 h-[106px] self-center my-[11px]"
+      />
       <h1 className="text-xl font-bold font-DMSans mb-[9px] text-dark-black">
         {carType}
       </h1>
       <div className="flex w-full justify-between items-center">
-        <div className="flex w-[40%] items-center justify-between">
+        <div className="flex w-[34%] items-center justify-between">
           <Replace />
           <p className="text-sm font-DMSans font-medium text-[#72767C]">
             {`${kilometresCount}K`}

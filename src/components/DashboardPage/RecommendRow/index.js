@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import RecommendCard from '../RecommendCard';
-import BeatLoader from '../Loader';
+import BeatLoader from '../../Loader';
 
 function RecommendRow() {
   const [cars, setCars] = useState([]);

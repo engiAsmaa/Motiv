@@ -1,7 +1,9 @@
 import React from 'react';
-import EarnedRow from '../../components/EarnedRow';
-import RecommendRow from '../../components/RecommendRow';
-import GraphsRow from '../../components/GraphsRow';
+import {
+  EarnedRow,
+  RecommendRow,
+  GraphsRow,
+} from '../../components/DashboardPage';
 
 function Dashboard() {
   return (

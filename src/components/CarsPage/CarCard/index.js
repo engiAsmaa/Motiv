@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ReactComponent as Like } from '../../images/cars/like.svg';
-import { ReactComponent as Replace } from '../../images/cars/replace.svg';
-import { ReactComponent as User } from '../../images/cars/user.svg';
+import { ReactComponent as Like } from '../../../images/cars/like.svg';
+import { ReactComponent as Replace } from '../../../images/cars/replace.svg';
+import { ReactComponent as User } from '../../../images/cars/user.svg';
 
 function CarCard({
   car: {
