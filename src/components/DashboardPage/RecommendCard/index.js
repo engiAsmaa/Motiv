@@ -22,20 +22,20 @@ function RecommendCard({
     >
       <div className="flex items-center">
         <Motiv className="mr-3" />
-        <h1 className="text-base font-bold font-DMSans text-light-black">
+        <h1 className="lg:text-base text-sm font-bold font-DMSans text-light-black">
           {`${percent}% Recommend`}
         </h1>
       </div>
       <img
         src={image}
         alt="car"
-        className="w-64 h-[106px] self-center my-[11px]"
+        className="lg:w-64 lg:h-[106px] h-20 w-44 self-center my-[11px]"
       />
-      <h1 className="text-xl font-bold font-DMSans mb-[9px] text-dark-black">
+      <h1 className="lg:text-xl text-lg font-bold font-DMSans mb-[9px] text-dark-black">
         {carType}
       </h1>
       <div className="flex w-full justify-between items-center">
-        <div className="flex w-[34%] items-center justify-between">
+        <div className="flex sm:w-[34%] w-1/2 items-center justify-between">
           <Replace />
           <p className="text-sm font-DMSans font-medium text-[#72767C]">
             {`${kilometresCount}K`}

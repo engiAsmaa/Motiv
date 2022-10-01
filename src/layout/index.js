@@ -8,7 +8,7 @@ function Layout({ children }) {
       <Header />
       <div className="flex">
         <SideNav />
-        <div className="w-[85%]">{children}</div>
+        <div className="sm:w-[85%] w-[90%]">{children}</div>
       </div>
     </div>
   );

@@ -8,12 +8,12 @@ import { dateOptions, typeOptions } from '../../fakeData';
 
 function CarsHeader({ setSelectTypeVal, selectTypeVal }) {
   return (
-    <div className="flex w-full justify-between items-center py-[34px]">
-      <div className="flex items-center">
+    <div className="flex sm:flex-row flex-col  w-full justify-between sm:items-center items-start sm:py-[34px] sm:p-5 p-0">
+      <div className="flex items-center sm:flex-row flex-col ">
         <Filter
           options={dateOptions}
           onChange={() => {}}
-          className="mr-4 w-[122px]"
+          className="sm:mr-4 mr-0 mb-2 sm:mb-0 sm:w-[122px] w-[143px]"
           date
         />
         <Filter
@@ -25,8 +25,8 @@ function CarsHeader({ setSelectTypeVal, selectTypeVal }) {
         />
       </div>
       <div className="flex items-center">
-        <Grid className="mr-4" />
-        <FilterIcon />
+        <Grid className="mr-4 mt-2 sm:mt-0" />
+        <FilterIcon className="sm:mb-1.5 mb-0" />
       </div>
     </div>
   );

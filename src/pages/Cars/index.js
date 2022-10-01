@@ -28,13 +28,13 @@ function Cars() {
   if (carsReq.loading) return <BeatLoader />;
 
   return (
-    <div className="flex flex-col p-[30px]">
-      <h1 className="md:text-3xl text-xl font-bold font-DMSans">Booking</h1>
+    <div className="flex flex-col sm:p-[30px] p-[15px]">
+      <h1 className="md:text-3xl text-xl font-bold font-DMSans sm:mb-0 mb-2">Booking</h1>
       <CarsHeader
         setSelectTypeVal={setSelectTypeVal}
         selectTypeVal={selectTypeVal}
       />
-      <div className="grid xl:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-6 overflow-y-auto h-[calc(100vh-300px)]">
+      <div className="grid xl:grid-cols-3 pr-2  md:grid-cols-2 grid-cols-1 gap-6 overflow-y-auto h-[calc(100vh-280px)] sm:h-[calc(100vh-300px)]">
         {carsReq.cars.length ? (
           carsReq.cars.map((car) => (
             <div>
