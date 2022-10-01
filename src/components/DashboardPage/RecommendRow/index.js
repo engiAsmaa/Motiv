@@ -20,7 +20,7 @@ function RecommendRow() {
   if (loading) return <BeatLoader />;
 
   return (
-    <div className="grid grid-cols-3 gap-[30px] w-full min-h-[236px]">
+    <div className="grid md:grid-cols-3 grid-cols-1 md:gap-[30px] gap-4 w-full min-h-[236px]">
       {cars.length ? (
         cars.map((car) => <RecommendCard key={car.id} car={car} />)
       ) : (

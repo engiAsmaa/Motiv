@@ -10,37 +10,41 @@ function CarCard({
   },
 }) {
   return (
-    <div className="flex flex-col items-center  p-6 rounded-2xl bg-white min-h-[267px]">
+    <div className="flex flex-col items-center  sm:p-6 p-3 rounded-2xl bg-white min-h-[267px]">
       <div className="flex w-full justify-between">
-        <h1 className="text-lg font-bold font-DMSans text-light-black">
+        <h1 className="sm:text-lg text-base font-bold font-DMSans text-light-black">
           {name}
         </h1>
         <Like
           className={`${like ? 'fill-[#F84F56]' : 'stroke-[#A4A5A6]'} mr-3 `}
         />
       </div>
-      <h1 className="self-start text-base font-normal font-DMSans mt-[5px] text-[#72767C]">
+      <h1 className="self-start sm:text-base text-sm font-normal font-DMSans mt-[5px] text-[#72767C]">
         {type}
       </h1>
 
-      <img src={image} alt="car" className="w-[233px] h-[105px] my-[21px]" />
+      <img
+        src={image}
+        alt="car"
+        className="w-[233px] h-[105px] sm:my-[21px] my-4"
+      />
 
       <div className="flex w-full justify-between items-center">
         <div className="flex w-[40%] items-center justify-between">
-          <div className="flex items-center mr-5">
-            <User className="mr-[6px]" />
-            <p className="font-DMSans text-lg font-normal text-[#72767C]">
+          <div className="flex sm:flex-row flex-col items-center sm:mr-5 mr-2">
+            <User className="sm:mr-[6px]" />
+            <p className="font-DMSans sm:text-lg text-base font-normal text-[#72767C]">
               {viewerCount}
             </p>
           </div>
-          <div className="flex items-center">
-            <Replace className="mr-[7px]" />
-            <p className="font-DMSans text-base font-normal text-[#72767C]">
+          <div className="flex items-center sm:flex-row flex-col">
+            <Replace className="sm:mr-[7px]" />
+            <p className="font-DMSans sm:text-base text-sm font-normal text-[#72767C]">
               {drivingType}
             </p>
           </div>
         </div>
-        <p className="text-lg font-medium font-DMSans text-light-black">
+        <p className="sm:text-lg text-sm font-medium font-DMSans text-light-black">
           {`$${price}`}
           <span className="text-[#72767C]">/d</span>
         </p>
