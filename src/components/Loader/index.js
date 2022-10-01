@@ -1,12 +1,12 @@
 import React from 'react';
-import DotLoader from 'react-spinners/DotLoader';
+import BeatLoader from 'react-spinners/BeatLoader';
 
-function DotLoaderComponent() {
+function BeatLoaderComponent() {
   return (
-    <div>
-      <DotLoader sizeUnit="px" size={20} color="#007BFF" loading />
+    <div className="flex justify-center items-center w-full h-full">
+      <BeatLoader sizeUnit="px" size={15} loading color="#A162F7" />
     </div>
   );
 }
 
-export default DotLoaderComponent;
+export default BeatLoaderComponent;

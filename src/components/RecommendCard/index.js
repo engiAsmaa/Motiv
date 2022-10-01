@@ -6,12 +6,9 @@ import { ReactComponent as Settings } from '../../images/dashboard/setting.svg';
 import { ReactComponent as Energy } from '../../images/dashboard/energyIcon.svg';
 
 function RecommendCard({
-  id,
-  carType,
-  percent,
-  img,
-  pricePerHour,
-  kilometresCount,
+  car: {
+    id, percent, image, carType, kilometresCount, pricePerHour,
+  },
 }) {
   return (
     <div
@@ -23,14 +20,16 @@ function RecommendCard({
             : 'bg-[#F4E3E5]'
       } flex flex-col items-start  px-[29px] py-[17px] rounded-[14px] `}
     >
-      <div className="flex items-center mb-[12.5px]">
+      <div className="flex items-center">
         <Motiv className="mr-3" />
-        <h1 className="text-base font-bold font-DMSans">
+        <h1 className="text-base font-bold font-DMSans text-light-black">
           {`${percent}% Recommend`}
         </h1>
       </div>
-      <img src={img} alt="car" className="w-64 h-[106px] self-center" />
-      <h1 className="text-xl font-bold font-DMSans my-[11px]">{carType}</h1>
+      <img src={image} alt="car" className="w-64 h-[106px] self-center my-[11px]" />
+      <h1 className="text-xl font-bold font-DMSans mb-[9px] text-dark-black">
+        {carType}
+      </h1>
       <div className="flex w-full justify-between items-center">
         <div className="flex w-[40%] items-center justify-between">
           <Replace />
@@ -48,12 +47,7 @@ function RecommendCard({
   );
 }
 RecommendCard.propTypes = {
-  id: PropTypes.string.isRequired,
-  percent: PropTypes.number.isRequired,
-  pricePerHour: PropTypes.number.isRequired,
-  kilometresCount: PropTypes.number.isRequired,
-  carType: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  car: PropTypes.object.isRequired,
 };
 
 export default RecommendCard;

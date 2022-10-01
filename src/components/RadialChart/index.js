@@ -13,6 +13,7 @@ function RadialChart({
         track: {
           startAngle: -125,
           endAngle: 125,
+          background: trackColor,
         },
         dataLabels: {
           name: {
@@ -32,7 +33,7 @@ function RadialChart({
       },
     },
 
-    colors: [arcColor, trackColor],
+    colors: [arcColor],
     stroke: {
       lineCap: 'round',
     },

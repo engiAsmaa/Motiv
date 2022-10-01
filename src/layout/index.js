@@ -4,7 +4,7 @@ import SideNav from './SideNav';
 
 function Layout({ children }) {
   return (
-    <div className="w-screen h-screen overflow-x-hidden">
+    <div className="w-screen h-screen overflow-hidden">
       <Header />
       <div className="flex">
         <SideNav />

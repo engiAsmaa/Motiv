@@ -1,36 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import RecommendCard from '../RecommendCard';
+import BeatLoader from '../Loader';
 
-// const bgColors = ['#E1DFA4', '#E3ECF1', '#F4E3E5'];
 function RecommendRow() {
   const [cars, setCars] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch('https://6336d6a165d1e8ef26747ec9.mockapi.io/Cars1')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
         setCars(data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err.message);
       });
   }, []);
+  if (loading) return <BeatLoader />;
 
   return (
-    <div className="grid grid-cols-3 gap-[30px] w-full">
-      {cars.map((car) => (
-        <RecommendCard
-          key={car.id}
-          id={car.id}
-          carType={car.carType}
-          percent={car.percent}
-          img={car.image}
-          pricePerHour={car.pricePerHour}
-          kilometresCount={car.kilometresCount}
-          bgColor="bg-[#E1DFA4]"
-        />
-      ))}
+    <div className="grid grid-cols-3 gap-[30px] w-full min-h-[236px]">
+      {cars.length ? (
+        cars.map((car) => <RecommendCard key={car.id} car={car} />)
+      ) : (
+        <h1 className="text-dark-gray">No Cars Founded</h1>
+      )}
     </div>
   );
 }
