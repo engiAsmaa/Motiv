@@ -16,13 +16,17 @@ function EarnedRow() {
           </p>
           <button
             type="button"
-            className="bg-dark-green lg:py-3 lg:px-6 py-1 px-4 font-bold font-Effra lg:text-xs text-[10px] text-white mt-7 rounded"
+            className="hover:scale-110 hover:duration-200 bg-dark-green lg:py-3 lg:px-6 py-1 px-4 font-bold font-Effra lg:text-xs text-[10px] text-white mt-7 rounded"
           >
             Discover More
           </button>
         </div>
 
-        <img src={compImg} alt="computer" className="lg:w-56 lg:h-[185px] w-40 h-28" />
+        <img
+          src={compImg}
+          alt="computer"
+          className="lg:w-56 lg:h-[185px] w-40 h-28"
+        />
       </div>
 
       <div className="grid grid-cols-2 md:gap-5 gap-4">

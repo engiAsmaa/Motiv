@@ -1,35 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import { CarsHeader, CarCard } from '../../components/CarsPage';
 import BeatLoader from '../../components/Loader';
+import { useSearchContext } from '../../layout';
 
 function Cars() {
   const [carsReq, setCarsReq] = useState({ cars: [], loading: true });
   const [selectTypeVal, setSelectTypeVal] = useState('');
-  // fetch data and filter by car type
+  const searchTxt = useSearchContext();
+  console.log(searchTxt);
+  console.log(selectTypeVal);
+
+  // fetch data with filter and search by car type
   useEffect(() => {
     fetch('https://6336d6a165d1e8ef26747ec9.mockapi.io/cars')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        if (selectTypeVal) {
+        if (searchTxt || selectTypeVal) {
           return setCarsReq({
-            cars: data.filter(
-              (ii) => ii.type.toLowerCase() === selectTypeVal.toLowerCase(),
-            ),
+            cars: data
+              .filter((it) => it.name.toLowerCase().includes(searchTxt.toLowerCase()))
+              .filter((ii) => ii.type.toLowerCase().includes(selectTypeVal.toLowerCase())),
             loading: false,
           });
         }
+
         return setCarsReq({ cars: data, loading: false });
       })
       .catch((err) => {
         console.log(err.message);
       });
-  }, [selectTypeVal]);
+  }, [selectTypeVal, searchTxt]);
   if (carsReq.loading) return <BeatLoader />;
 
   return (
     <div className="flex flex-col sm:p-[30px] p-[15px]">
-      <h1 className="md:text-3xl text-xl font-bold font-DMSans sm:mb-0 mb-2">Booking</h1>
+      <h1 className="md:text-3xl text-xl font-bold font-DMSans sm:mb-0 mb-2">
+        Booking
+      </h1>
       <CarsHeader
         setSelectTypeVal={setSelectTypeVal}
         selectTypeVal={selectTypeVal}
